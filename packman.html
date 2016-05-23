@@ -1,0 +1,631 @@
+<html>
+<head>
+<title>PACKMAN</title>
+
+
+</head>
+
+<style type = "text/css">
+h1 {
+color :Blue ;
+}
+
+.title {   
+  animation-duration: 2000ms;
+  animation-name: blink;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+p{
+font-size:10em;
+}
+
+@keyframes blink {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+  
+  0% {
+    opacity: 1;
+    color: #8B4513;
+  }
+
+  15% {
+    color: Blue;
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 1;
+    color: Brown;
+  }
+
+  60% {
+   opacity: 0;
+   color: Orange;
+ }
+
+ 75% {
+   opacity: 1;
+   color: Red;
+ }
+ 
+ 100% {
+ opacity:0;
+ color:#FFD700;
+ }
+}
+</style>
+
+
+
+
+<body bgcolor = "white">
+<p align = "center" class = "title"><img src="PMtitle.png" height = "15%" width = "50%"></img></p>
+<bgsound loop="infinite"><embed src="music1.wav" hidden='true' autostart='true' loop='infinite' type='audio/mpeg' /></bgsound>
+<h1 align = "right" id = "score" bgcolor = "green"></h1>
+<table style="position: absolute; top: 500; bottom: 50; left: 380; right: 50;" border ="0" id = "PACtable">	
+	<tr id = "row1"> 
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	</tr>
+	
+	<tr><!--ROW 2-->
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#8B4513"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	</tr>
+	
+	<tr><!--ROW 3-->
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#8B4513"></td>
+	<td height = "110" width = "110" bgcolor = "#8B4513"></td><td height = "110" width = "110" bgcolor = "#8B4513"></td>
+	<td height = "110" width = "110" bgcolor = "#8B4513"></td><td height = "110" width = "110" bgcolor = "#8B4513"></td>
+	<td height = "110" width = "110" bgcolor = "#8B4513"></td><td height = "110" width = "110" bgcolor = "#8B4513"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	</tr>
+	
+	<tr><!--ROW 4-->
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+		<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#8B4513"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	</tr>
+	
+	<tr><!--ROW 5-->
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	</tr>
+	
+	<tr><!--ROW 6-->
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	</tr>
+	
+	<tr><!--ROW 7-->
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	</tr>
+	
+	<tr><!--ROW 8-->
+	<td height = "110" width = "110" bgcolor = "#DEB887" id = "start"><img height = "110" width = "110" src = "PM.gif" ></img></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#8B4513"></td><td height = "110" width = "110" bgcolor = "#8B4513"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#8B4513"></td>
+	<td height = "110" width = "110" bgcolor = "#8B4513"></td><td height = "110" width = "110" bgcolor = "#8B4513"></td>
+	<td height = "110" width = "110" bgcolor = "#8B4513"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	</tr>
+       	
+	<tr><!--ROW 9-->
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#8B4513"></td><td height = "110" width = "110" bgcolor = "#8B4513"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	</tr>
+	
+	<tr><!--ROW 10-->
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	</tr>
+	
+	<tr><!--ROW 11-->
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	</tr>
+	
+	<tr><!--ROW 12-->
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	</tr>
+	
+	<tr><!--ROW 13-->
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#8B4513"></td>
+	<td height = "110" width = "110" bgcolor = "#8B4513"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#8B4513"></td><td height = "110" width = "110" bgcolor = "#8B4513"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	</tr>
+	
+	<tr><!--ROW 14-->
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#8B4513"></td>
+	<td height = "110" width = "110" bgcolor = "#8B4513"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#8B4513"></td><td height = "110" width = "110" bgcolor = "#8B4513"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "#DEB887"></td>
+	<td height = "110" width = "110" bgcolor = "#DEB887"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	</tr>
+	
+	<tr><!--ROW 15--> 
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	<td height = "110" width = "110" bgcolor = "blue"></td><td height = "110" width = "110" bgcolor = "blue"></td>
+	</tr>
+
+</table>
+
+<script>
+var timer = 0;
+var SND1 = new Audio("music1.wav");
+SND1.play();
+var IMG1;
+var IMG2;
+var cell = document.getElementById("PACtable");
+var row = 7;
+var col = 0;
+var Dcount = 0;
+var GAMEOVER = true;
+var applesEaten =0;
+var totlaApples = 0;
+var nxtU
+var nxtD
+var nxtL
+var nxtR
+//var img = cell.rows[row].cells.item(col).innerHTML;
+//var myMood= document.getElementById("");
+
+
+
+
+
+function MOVE(e)
+{
+if(e.keyCode == 39){ moveRight()}
+
+else if(e.keyCode == 37){moveLeft();}
+
+else if(e.keyCode == 38){moveUp();}
+
+else if(e.keyCode == 40){moveDown();}
+
+var snd1 = new Audio("music2.wav"); 
+snd1.play();
+
+//var sound = new Audio("music3.wav");
+//sound.play();
+}
+
+function moveRight(){	
+if( col >= 38 || checkRight() ){
+
+}
+else{
+nxtR = cell.rows[row].cells.item(col+1).innerHTML
+IMG1 = cell.rows[row].cells.item(col).innerHTML;
+IMG2 = IMG1;
+cell.rows[row].cells.item(col).innerHTML = " ";
+col = col+1;
+cell.rows[row].cells.item(col).innerHTML = IMG2;
+if(nxtR == "<img src=\"apple.png\">"){
+applesEaten += 1 ;
+//alert("eaten RIGHT")
+totlaApples += 1 ;
+}
+}
+}
+
+function moveLeft(){
+if(col <= 0){ }
+else {
+nxtL = cell.rows[row].cells.item(col-1).innerHTML
+IMG1 = cell.rows[row].cells.item(col).innerHTML;
+IMG2 = IMG1;
+cell.rows[row].cells.item(col).innerHTML = " ";
+col = col-1;
+cell.rows[row].cells.item(col).innerHTML = IMG2;
+if(nxtL == "<img src=\"apple.png\">"){
+applesEaten += 1 ;
+//alert("eaten LEFT")
+totlaApples += 1 ;
+}
+}
+}
+
+function moveUp(){
+if(row <= 1 || ( checkUp() ) ){ }
+else{
+nxtU = cell.rows[row-1].cells.item(col).innerHTML
+IMG1 = cell.rows[row].cells.item(col).innerHTML;
+IMG2 = IMG1;
+cell.rows[row].cells.item(col).innerHTML = " ";
+row = row-1;
+cell.rows[row].cells.item(col).innerHTML = IMG2;
+if(nxtU == "<img src=\"apple.png\">"){
+applesEaten += 1 ;
+//alert("eaten UP")
+totlaApples += 1 ;
+}
+}
+}
+
+function moveDown(){
+if(row >= 13 ){ }
+else{
+nxtD = cell.rows[row+1].cells.item(col).innerHTML
+IMG1 = cell.rows[row].cells.item(col).innerHTML;
+IMG2 = IMG1;
+cell.rows[row].cells.item(col).innerHTML = " ";
+row = row+1;
+cell.rows[row].cells.item(col).innerHTML = IMG2;
+if(nxtD == "<img src=\"apple.png\">"){
+applesEaten += 1 ;
+//alert("eaten DOWN")
+totlaApples += 1 ;
+}
+}
+}
+
+function checkUp(){
+if( (row==1)|| (row==6&&(col==0||col==1))||(row==5&&(col==5||col==6||col==7||col==8||col==9||col==10))
+||(row==3&&(col==19||col==20||col==21||col==22||col==23||col==24))||(row==4&&(col==25))
+||(row==9&&(col==4||col==5||col==9||col==10||col==11||col==12||col==13||col==14||col==15))
+||(row==11&&(col==15||col==32))
+||(row==9&&(col==19||col==20||col==21||col==22||col==23||col==24))
+||(row==8&&(col==28||col==29||col==30||col==31||col==35||col==36||col==37||col==38))
+||(row==12&&(col==23||col==24||col==25||col==26||col==27||col==28||col==29))
+){return true ;}
+else return false;
+}
+
+function checkRight(){
+if((col==4&&(row==3||row==4||row==11||row==12||row==13))||(col==3&&(row==7||row==8))||(row==2&&col==18)
+||(row==8&&(col==8||col==18))||(col==18&&(row==7||row==6))||
+(col==14&&(row==4||row==10||row==9||row==8||row==7||row==6||row==5))
+||(col==10&&(row==12||row==13))||(col==17&&(row==13||row==12))||(col==22&&(row==11))
+||(col==31&&(row==4||row==5||row==6||row==7||row==8||row==9||row==10))||(col==27&&row==7)||(col==34&&row==7)
+||(col==24&&row==3)||(col==12&&row==1)
+){return true;}
+else return false;
+}
+
+function apple(row,collumn){
+var x = cell.rows[row].cells.item(collumn);
+
+var img1 = document.createElement("img");
+img1.src="apple.png";
+x.appendChild(img1);
+}
+
+function berry(row,collumn){
+var x = cell.rows[row].cells.item(collumn);
+
+var img1 = document.createElement("img");
+img1.src="berry.jpg";
+x.appendChild(img1);
+}
+
+function pine(row,collumn){
+var x = cell.rows[row].cells.item(collumn);
+
+var img1 = document.createElement("img");
+img1.src="pine.jpg";
+x.appendChild(img1);
+}
+
+var datarow = [];
+var datacol = []
+
+function randChoice(){
+//alert(nxtR);
+var x = Math.ceil(Math.random()*13)
+var y = Math.ceil(Math.random()*30)
+fillData(x,y);
+var CHOICE = [apple(x,y)]	
+var ch = Math.floor(Math.random(Math.random())*1);
+CHOICE[ch];
+//a	lert(applesEaten);	
+var scoreLoc = document.getElementById("score")
+var scoreEle = document.createElement("h1");
+scoreLoc.appendChild(scoreEle);
+scoreEle.style.fontSize="100px";
+scoreLoc.innerHTML="SCORE" + totlaApples.toString();
+Dcount = Dcount-applesEaten;
+applesEaten = 0;
+
+//alert(Dcount)
+//alert(totlaApples)
+if(Dcount > 6) {
+//alert("GAME OVER");
+GAMEOVER = false;
+//alert("GAMEOVER");
+document.write("<h1>GAME OVER<h1>");
+
+}
+}
+
+function fillData(u,v){
+datarow[Dcount] = u;
+datacol[Dcount] = v;
+Dcount = Dcount+1; 
+}
+
+function playGame(){
+	
+
+var intset = window.setInterval(randChoice, 5000);
+document.onkeydown = MOVE;
+
+
+}
+
+
+
+
+playGame();
+
+</script>
+</body>
+
+</html>
